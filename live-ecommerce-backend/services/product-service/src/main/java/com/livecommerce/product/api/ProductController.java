@@ -1,14 +1,13 @@
 package com.livecommerce.product.api;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.livecommerce.product.domain.Product;
 import com.livecommerce.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -18,7 +17,7 @@ public class ProductController {
 
     private final ProductService productService;
 
-    // 🔹 Get all products / filter / search
+    // ✅ Get All Products / Search / Filter
     @GetMapping
     public ResponseEntity<List<Product>> getProducts(
             @RequestParam(required = false) String category,
@@ -32,61 +31,77 @@ public class ProductController {
         return ResponseEntity.ok(productService.getAllProducts());
     }
 
-    // 🔹 Get product by ID
+    // ✅ Create Product with Image (Form-Data)
+    @PostMapping("/add")
+    public ResponseEntity<Product> createProduct(
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("price") BigDecimal price,
+            @RequestParam("category") String category,
+            @RequestParam("live") boolean live,
+            @RequestParam("stock") Integer stock,
+            @RequestParam(value = "image", required = false) MultipartFile imageFile
+    ) {
+
+        Product product = Product.builder()
+                .name(name)
+                .description(description)
+                .price(price)
+                .category(category)
+                .live(live)
+                .stock(stock)
+                .build();
+
+        Product savedProduct = productService.createProduct(product, imageFile);
+        return ResponseEntity.ok(savedProduct);
+    }
+
+    // ✅ Update Product with Image (Form-Data)
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Product> updateProduct(
+            @PathVariable Long id,
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("price") BigDecimal price,
+            @RequestParam("category") String category,
+            @RequestParam("live") boolean live,
+            @RequestParam("stock") Integer stock,
+            @RequestParam(value = "image", required = false) MultipartFile imageFile
+    ) {
+
+        Product updatedProductObj = Product.builder()
+                .name(name)
+                .description(description)
+                .price(price)
+                .category(category)
+                .live(live)
+                .stock(stock)
+                .build();
+
+        Product updated = productService.updateProduct(id, updatedProductObj, imageFile);
+        return ResponseEntity.ok(updated);
+    }
+
+    // ✅ Get Product by Id
     @GetMapping("/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable Long id) {
         return ResponseEntity.ok(productService.getProductById(id));
     }
 
-    // 🔹 Get only live products
+    // ✅ Get Only Live Products
     @GetMapping("/live")
     public ResponseEntity<List<Product>> getLiveProducts() {
         return ResponseEntity.ok(productService.getLiveProducts());
     }
 
-    // 🔹 Create product with image (multipart/form-data)
-    @PostMapping(consumes = {"multipart/form-data"})
-    public ResponseEntity<Product> createProduct(
-            @RequestPart("product") String productJson,
-            @RequestPart(value = "image", required = false) MultipartFile imageFile
-    ) {
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            Product product = objectMapper.readValue(productJson, Product.class);
-            Product savedProduct = productService.createProduct(product, imageFile);
-            return ResponseEntity.ok(savedProduct);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-    }
-
-    // 🔹 Update product with image
-    @PutMapping(value = "/{id}", consumes = {"multipart/form-data"})
-    public ResponseEntity<Product> updateProduct(
-            @PathVariable Long id,
-            @RequestPart("product") String productJson,
-            @RequestPart(value = "image", required = false) MultipartFile imageFile
-    ) {
-        try {
-            // Convert JSON string to Product object manually
-            ObjectMapper mapper = new ObjectMapper();
-            Product product = mapper.readValue(productJson, Product.class);
-
-            Product updated = productService.updateProduct(id, product, imageFile);
-            return ResponseEntity.ok(updated);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-    }
-
-    // 🔹 Delete product
+    // ✅ Delete Product
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
         return ResponseEntity.ok("Product deleted successfully");
     }
 
+    // ✅ Reduce Stock
     @PutMapping("/{productId}/reduce-stock")
     public ResponseEntity<Void> reduceStock(
             @PathVariable Long productId,
