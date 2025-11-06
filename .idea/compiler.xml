@@ -25,6 +25,16 @@
         </processorPath>
         <module name="compliance-service" />
       </profile>
+      <profile name="Annotation profile for reservation-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="reservation-service" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="payments-service" target="17" />
@@ -41,6 +51,7 @@
       <module name="order-service" options="-parameters" />
       <module name="payments-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
+      <module name="reservation-service" options="-parameters" />
       <module name="stream-service" options="-parameters" />
     </option>
   </component>

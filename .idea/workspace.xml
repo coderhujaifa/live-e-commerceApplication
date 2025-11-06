@@ -5,52 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49542da8-3b99-48d0-b07b-af8ea69df5f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/auth-service/src/main/java/com/livecommerce/auth_service/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/controller/StreamController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/dto/AnalyticsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/dto/PinProductRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/dto/ProductAnalyticsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/dto/StreamCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/dto/StreamResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/entity/Stream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/entity/StreamProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/entity/StreamStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/repository/StreamProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/repository/StreamRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/service/StreamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/service/impl/StreamServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/websocket/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/websocket/ChatMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/websocket/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config-server/src/main/resources/configurations/reservation-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config-server/src/main/resources/configurations/stream-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/AvailabilityDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/BlockedDateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/BreakPeriod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/DayAvailability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/ManualReservationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/NotesRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/SlotDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/dto/SlotPreviewRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/reservation-service/src/main/java/com/example/reservation_service/service/impl/ReservationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth-service/src/main/java/com/livecommerce/auth_service/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth-service/src/main/java/com/livecommerce/auth_service/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/config-server/src/main/resources/configurations/product-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/config-server/src/main/resources/configurations/product-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/OrderServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/OrderServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/client/ProductClient$ProductDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/client/ProductClient$ProductDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/client/ProductClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/client/ProductClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/Order$OrderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/Order$OrderBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/OrderItem$OrderItemBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/OrderItem$OrderItemBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/OrderItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/OrderStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/domain/OrderStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/repository/OrderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/request/OrderRequest$OrderRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/request/OrderRequest$OrderRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/request/OrderRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/request/OrderRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/order-service/target/classes/com/livecommerce/order/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/product-service/src/main/resources/db/changelog/db.changelog-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/src/main/resources/db/changelog/db.changelog-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/product-service/target/classes/db/changelog/db.changelog-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/target/classes/db/changelog/db.changelog-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/product-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/product-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/product-service/target/product-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/target/product-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/product-service/target/product-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/target/product-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/StreamServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/stream-service/src/main/java/com/live_ecommerce/stream_service/StreamServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/stream-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/stream-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../live-ecommerce-frontend" beforeDir="false" afterPath="$PROJECT_DIR$/../live-ecommerce-frontend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/product-service/src/main/java/com/livecommerce/product/api/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/src/main/java/com/livecommerce/product/api/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/product-service/target/classes/com/livecommerce/product/api/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/product-service/target/classes/com/livecommerce/product/api/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/stream-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/stream-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -107,6 +79,7 @@
     "Spring Boot.OrderServiceApplication.executor": "Run",
     "Spring Boot.PaymentsServiceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
+    "Spring Boot.ReservationServiceApplication.executor": "Run",
     "Spring Boot.StreamServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -283,6 +256,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReservationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="reservation-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.reservation_service.ReservationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StreamServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="stream-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.live_ecommerce.stream_service.StreamServiceApplication" />
@@ -326,7 +307,8 @@
       <workItem from="1761732894539" duration="2498000" />
       <workItem from="1761800795078" duration="7763000" />
       <workItem from="1761903734598" duration="3499000" />
-      <workItem from="1761968024172" duration="24996000" />
+      <workItem from="1761968024172" duration="25037000" />
+      <workItem from="1762317572080" duration="13413000" />
     </task>
     <servers />
   </component>
